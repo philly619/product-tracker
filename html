@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Alex Mercer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-logo">A.Mercer</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#customers">Customers</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HOME / DASHBOARD ══ -->
+<section id="home">
+
+  <!-- LEFT: Profile Card -->
+  <div class="profile-card">
+    <div class="avatar-wrapper">
+      <div class="avatar">AM</div>
+      <div class="status-dot"></div>
+    </div>
+
+    <div class="profile-name">Alex Mercer</div>
+    <div class="profile-role">// Full-Stack Developer &amp; Data Analyst</div>
+    <p class="profile-bio">
+      Crafting digital experiences at the intersection of design and engineering.
+      Specialising in scalable web systems, real-time dashboards, and data-driven products
+      that move the needle.
+    </p>
+
+    <div class="skills-list">
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">Node.js</span>
+      <span class="skill-tag">PostgreSQL</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">AWS</span>
+      <span class="skill-tag">GraphQL</span>
+      <span class="skill-tag">TypeScript</span>
+      <span class="skill-tag">Docker</span>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-val">7+</div>
+        <div class="stat-lbl">Yrs Exp</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">52</div>
+        <div class="stat-lbl">Projects</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val">98%</div>
+        <div class="stat-lbl">Satisfaction</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: KPI Dashboard Panels -->
+  <div class="dashboard-panels">
+
+    <div class="panel">
+      <div class="panel-title">Business Overview — May 2026</div>
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kpi-val gold">$284K</div>
+          <div class="kpi-lbl">Total Revenue</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val blue">1,482</div>
+          <div class="kpi-lbl">Total Orders</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val rose">38</div>
+          <div class="kpi-lbl">Active Clients</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val green">94.2%</div>
+          <div class="kpi-lbl">Fulfilment Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Order Pipeline</div>
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kpi-val green">627</div>
+          <div class="kpi-lbl">Delivered</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val blue">314</div>
+          <div class="kpi-lbl">Processing</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val gold">421</div>
+          <div class="kpi-lbl">Pending</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val rose">120</div>
+          <div class="kpi-lbl">Cancelled</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Performance Timing Avg</div>
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kpi-val blue">1.4d</div>
+          <div class="kpi-lbl">Processing</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val gold">3.2d</div>
+          <div class="kpi-lbl">Delivery</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val green">98ms</div>
+          <div class="kpi-lbl">API Response</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-val rose">4.8h</div>
+          <div class="kpi-lbl">Support SLA</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══ CUSTOMERS ══ -->
+<section id="customers">
+  <div class="section-label">// Register</div>
+  <div class="section-title">Customer Registry</div>
+
+  <div class="table-wrapper">
+    <div class="table-header">
+      <h3>&#9632; Active Accounts — 12 records</h3>
+      <input class="search-bar" type="text" placeholder="Search customers…" oninput="filterTable(this.value)">
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table id="customer-table">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Products</th>
+            <th>Orders</th>
+            <th>Status</th>
+            <th>Last Order</th>
+            <th>Avg Delivery</th>
+            <th>Account Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#e8c97a,#e87aa8)">JD</div>
+                <div>
+                  <div class="customer-name">James Dalton</div>
+                  <div class="customer-email">j.dalton@nexus.io</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">SaaS Pro</span><span class="product-pill">Analytics+</span><span class="product-pill">Cloud S3</span></div></td>
+            <td><span class="order-count">47</span></td>
+            <td><span class="badge badge-delivered">Delivered</span></td>
+            <td class="timing">May 10, 2026</td>
+            <td class="timing">2.1 days</td>
+            <td><span class="balance-pos">+$12,450.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#7a9fe8,#4ade80)">SW</div>
+                <div>
+                  <div class="customer-name">Sofia Wren</div>
+                  <div class="customer-email">sofia.w@luminary.co</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Starter Kit</span><span class="product-pill">Support Plan</span></div></td>
+            <td><span class="order-count">23</span></td>
+            <td><span class="badge badge-processing">Processing</span></td>
+            <td class="timing">May 13, 2026</td>
+            <td class="timing">3.4 days</td>
+            <td><span class="balance-pos">+$4,230.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#e87aa8,#7a9fe8)">MK</div>
+                <div>
+                  <div class="customer-name">Marcus Klein</div>
+                  <div class="customer-email">marcus@kleindynamics.de</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Enterprise</span><span class="product-pill">API Access</span><span class="product-pill">Uptime SLA</span></div></td>
+            <td><span class="order-count">112</span></td>
+            <td><span class="badge badge-delivered">Delivered</span></td>
+            <td class="timing">May 08, 2026</td>
+            <td class="timing">1.7 days</td>
+            <td><span class="balance-pos">+$88,900.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#4ade80,#e8c97a)">PN</div>
+                <div>
+                  <div class="customer-name">Priya Nair</div>
+                  <div class="customer-email">p.nair@orbitaltech.in</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Analytics+</span><span class="product-pill">Reports</span></div></td>
+            <td><span class="order-count">31</span></td>
+            <td><span class="badge badge-pending">Pending</span></td>
+            <td class="timing">May 12, 2026</td>
+            <td class="timing">4.0 days</td>
+            <td><span class="balance-neg">-$1,200.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#e8c97a,#4ade80)">TO</div>
+                <div>
+                  <div class="customer-name">Thomas Obi</div>
+                  <div class="customer-email">thomas.o@vectorlabs.ng</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">SaaS Pro</span><span class="product-pill">Cloud S3</span></div></td>
+            <td><span class="order-count">58</span></td>
+            <td><span class="badge badge-delivered">Delivered</span></td>
+            <td class="timing">May 07, 2026</td>
+            <td class="timing">2.8 days</td>
+            <td><span class="balance-pos">+$21,780.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#7a9fe8,#e87aa8)">LC</div>
+                <div>
+                  <div class="customer-name">Léa Chouard</div>
+                  <div class="customer-email">lea.c@creatifparis.fr</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Design Pack</span><span class="product-pill">CDN</span></div></td>
+            <td><span class="order-count">19</span></td>
+            <td><span class="badge badge-cancelled">Cancelled</span></td>
+            <td class="timing">Apr 29, 2026</td>
+            <td class="timing">—</td>
+            <td><span class="balance-neg">-$560.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#4ade80,#7a9fe8)">RH</div>
+                <div>
+                  <div class="customer-name">Ryan Huang</div>
+                  <div class="customer-email">ryan@horizonstack.sg</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Enterprise</span><span class="product-pill">API Access</span><span class="product-pill">Analytics+</span><span class="product-pill">Support Plan</span></div></td>
+            <td><span class="order-count">204</span></td>
+            <td><span class="badge badge-processing">Processing</span></td>
+            <td class="timing">May 14, 2026</td>
+            <td class="timing">1.5 days</td>
+            <td><span class="balance-pos">+$145,200.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#e87aa8,#e8c97a)">AB</div>
+                <div>
+                  <div class="customer-name">Amara Bello</div>
+                  <div class="customer-email">a.bello@savannafintech.com</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Starter Kit</span></div></td>
+            <td><span class="order-count">7</span></td>
+            <td><span class="badge badge-pending">Pending</span></td>
+            <td class="timing">May 11, 2026</td>
+            <td class="timing">5.2 days</td>
+            <td><span class="balance-pos">+$890.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#e8c97a,#7a9fe8)">DM</div>
+                <div>
+                  <div class="customer-name">Diego Morales</div>
+                  <div class="customer-email">d.morales@futureworks.mx</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">SaaS Pro</span><span class="product-pill">Uptime SLA</span><span class="product-pill">Reports</span></div></td>
+            <td><span class="order-count">63</span></td>
+            <td><span class="badge badge-delivered">Delivered</span></td>
+            <td class="timing">May 09, 2026</td>
+            <td class="timing">2.3 days</td>
+            <td><span class="balance-pos">+$33,100.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#7a9fe8,#4ade80)">YK</div>
+                <div>
+                  <div class="customer-name">Yuki Kimura</div>
+                  <div class="customer-email">yuki.k@pixelcraft.jp</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Design Pack</span><span class="product-pill">CDN</span><span class="product-pill">Analytics+</span></div></td>
+            <td><span class="order-count">41</span></td>
+            <td><span class="badge badge-delivered">Delivered</span></td>
+            <td class="timing">May 06, 2026</td>
+            <td class="timing">3.0 days</td>
+            <td><span class="balance-pos">+$17,650.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#e87aa8,#4ade80)">KP</div>
+                <div>
+                  <div class="customer-name">Kira Petrov</div>
+                  <div class="customer-email">k.petrov@datavault.ru</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Cloud S3</span><span class="product-pill">API Access</span></div></td>
+            <td><span class="order-count">29</span></td>
+            <td><span class="badge badge-processing">Processing</span></td>
+            <td class="timing">May 13, 2026</td>
+            <td class="timing">2.7 days</td>
+            <td><span class="balance-neg">-$3,400.00</span></td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="customer-cell">
+                <div class="customer-avatar" style="background:linear-gradient(135deg,#4ade80,#e87aa8)">BO</div>
+                <div>
+                  <div class="customer-name">Ben O'Sullivan</div>
+                  <div class="customer-email">ben@clearpath.ie</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="products-cell"><span class="product-pill">Enterprise</span><span class="product-pill">Support Plan</span></div></td>
+            <td><span class="order-count">77</span></td>
+            <td><span class="badge badge-delivered">Delivered</span></td>
+            <td class="timing">May 05, 2026</td>
+            <td class="timing">1.9 days</td>
+            <td><span class="balance-pos">+$54,320.00</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="section-label">// Get in touch</div>
+  <div class="section-title">Contact Links</div>
+
+  <div class="contact-grid">
+    <a href="mailto:alex.mercer@dev.io" class="contact-card">
+      <span class="contact-icon">✉</span>
+      <div class="contact-platform">Email</div>
+      <div class="contact-handle">alex.mercer@dev.io</div>
+    </a>
+    <a href="https://linkedin.com/in/alexmercer" target="_blank" class="contact-card">
+      <span class="contact-icon">in</span>
+      <div class="contact-platform">LinkedIn</div>
+      <div class="contact-handle">/in/alexmercer</div>
+    </a>
+    <a href="https://github.com/alexmercer" target="_blank" class="contact-card">
+      <span class="contact-icon">⌥</span>
+      <div class="contact-platform">GitHub</div>
+      <div class="contact-handle">@alexmercer</div>
+    </a>
+    <a href="https://twitter.com/alexmercer_dev" target="_blank" class="contact-card">
+      <span class="contact-icon">✕</span>
+      <div class="contact-platform">X / Twitter</div>
+      <div class="contact-handle">@alexmercer_dev</div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-copy">© 2026 Alex Mercer. All rights reserved.</div>
+  <div class="footer-dev">Designed &amp; developed by <span>Alex Mercer</span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
