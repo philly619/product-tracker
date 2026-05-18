@@ -17,4 +17,4 @@ projectCards.forEach(card => {
 const footer = document.querySelector("footer p");
 const currentYear = new Date().getFullYear();
 
-footer.innerHTML = `Portfolio created by Philadelphia Chikalimba © ${currentYear}`;
+footer.innerHTML = `Portfolio created by Philadelphia Chikalimba © ${2026}`;
