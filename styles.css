@@ -1,209 +1,424 @@
- {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Portfolio | Midnight Edition</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-body {
-  color: #fff;
-  line-height: 1.6;
+    body {
+      color: #fff;              /* White text for strong contrast on black */
+      line-height: 1.6;
+      background: #000000;     /* SOLID BLACK background — removed split gradient entirely */
+    }
 
-  /* Split Background */
-  background: linear-gradient(
-    to bottom,
-    khaki 35%,
-    #5c4033 35%
-  );
-}
+    /* Navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: rgba(255, 255, 255, 0.05); /* subtle dark translucent, fits black bg */
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
 
-/* Navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
+    .logo {
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
 
-.logo {
-  color: #3b2a20;
-  font-size: 24px;
-}
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-}
+    .nav-links li {
+      margin-left: 0; /* reset */
+    }
 
-.nav-links li {
-  margin-left: 20px;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: #f0f0f0;
+      font-weight: bold;
+      transition: 0.3s;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: #3b2a20;
-  font-weight: bold;
-  transition: 0.3s;
-}
+    .nav-links a:hover {
+      color: white;
+      border-bottom-color: #ffffff;
+    }
 
-.nav-links a:hover {
-  color: white;
-}
+    /* Hero Section */
+    .hero {
+      padding: 60px 10%;
+    }
 
-/* Hero Section */
-.hero {
-  padding: 60px 10%;
-}
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
 
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
+    /* profile image: modern white border accent works well on black */
+    .profile-photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #ffffff;        /* bright white border stands out on black */
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.1);
+      background: #1a1a1a;
+    }
 
-.profile-photo {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #5c4033;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
+    .intro-text {
+      max-width: 600px;
+    }
 
-.intro-text {
-  max-width: 600px;
-}
+    .intro-text h1 {
+      color: #ffffff;           /* pure white headline */
+      font-size: 45px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
 
-.intro-text h1 {
-  color: #3b2a20;
-  font-size: 45px;
-}
+    .intro-text h3 {
+      color: #cccccc;           /* light grey, harmonious */
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
 
-.intro-text h3 {
-  color: #5c4033;
-  margin-bottom: 15px;
-}
+    .intro-text p {
+      color: #dddddd;           /* soft white/grey for readability */
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
 
-.intro-text p {
-  color: #2b1d15;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
+    /* button redesigned for black background (elegant light contrast) */
+    button {
+      padding: 12px 28px;
+      border: none;
+      background-color: #ffffff;
+      color: #000000;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
 
-button {
-  padding: 12px 25px;
-  border: none;
-  background-color: #5c4033;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    button:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
 
-button:hover {
-  background-color: #3b2a20;
-}
+    /* General Sections */
+    .section {
+      padding: 70px 10%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
 
-/* General Sections */
-.section {
-  padding: 70px 10%;
-}
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+      color: #ffffff;           /* white section titles */
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 36px;
-  color: khaki;
-}
+    /* Skills */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
 
-/* Skills */
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+    .skill-card {
+      background-color: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(2px);
+      padding: 25px 20px;
+      border-radius: 24px;
+      text-align: center;
+      transition: 0.25s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
 
-.skill-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  transition: 0.3s;
-}
+    .skill-card:hover {
+      transform: translateY(-6px);
+      background-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255,255,255,0.3);
+    }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.2);
-}
+    .skill-card h3 {
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
 
-/* Projects */
-.project-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 25px;
-}
+    .skill-card p {
+      color: #cccccc;
+    }
 
-.project-card h3 {
-  margin-bottom: 15px;
-  color: khaki;
-}
+    /* Projects */
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 28px;
+      border-radius: 24px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.2s;
+    }
 
-.tech-used {
-  margin-top: 10px;
-  font-style: italic;
-}
+    .project-card:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
 
-/* Difference Section */
-.difference-box {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 10px;
-}
+    .project-card h3 {
+      margin-bottom: 12px;
+      color: #ffffff;
+      font-size: 26px;
+    }
 
-/* Contact */
-.contact-list {
-  list-style: none;
-  text-align: center;
-}
+    .tech-used {
+      margin-top: 14px;
+      font-style: italic;
+      color: #bbbbbb;
+    }
 
-.contact-list li {
-  margin: 15px 0;
-  font-size: 18px;
-}
+    /* Difference Section */
+    .difference-box {
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 35px;
+      border-radius: 28px;
+      border-left: 5px solid #ffffff;
+    }
 
-.contact-list a {
-  color: khaki;
-  text-decoration: none;
-}
+    .difference-box p {
+      font-size: 1.1rem;
+      color: #eaeaea;
+    }
 
-.contact-list a:hover {
-  text-decoration: underline;
-}
+    /* Contact */
+    .contact-list {
+      list-style: none;
+      text-align: center;
+    }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #3b2a20;
-}
+    .contact-list li {
+      margin: 18px 0;
+      font-size: 18px;
+    }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-  }
+    .contact-list a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(255,255,255,0.4);
+      transition: 0.2s;
+    }
 
-  .nav-links {
-    display: none;
-  }
+    .contact-list a:hover {
+      color: #dddddd;
+      border-bottom-color: white;
+    }
 
-  .intro-text h1 {
-    font-size: 35px;
-  }
-}
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      background-color: #0a0a0a;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 5%;
+      }
+      
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .intro-text h1 {
+        font-size: 35px;
+      }
+      
+      .section {
+        padding: 50px 6%;
+      }
+      
+      .profile-photo {
+        width: 200px;
+        height: 200px;
+      }
+      
+      .difference-box {
+        padding: 25px;
+      }
+    }
+    
+    /* Additional refinement for consistent spacing */
+    .section:first-of-type {
+      border-top: none;
+    }
+    
+    .skill-card span, .project-card span {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">✦ LUMINA</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <!-- profile photo placeholder (using a stylish abstract avatar, but keep it relevant) -->
+      <img class="profile-photo" src="https://placehold.co/600x600/2c2c2c/white?text=MK&font=montserrat" alt="Profile portrait" 
+           onerror="this.src='https://randomuser.me/api/portraits/women/68.jpg'; this.onerror=null;">
+      <div class="intro-text">
+        <h1>Maya Krishnamoorthy</h1>
+        <h3>Creative Technologist & Frontend Architect</h3>
+        <p>Crafting digital experiences with precision. I turn complex ideas into fluid, human-centered interfaces. Based between minimalism and depth.</p>
+        <button id="contactBtn">Let's connect →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>⚡ Core competencies</h2>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h3>React & Next.js</h3>
+        <p>Component-driven architectures, SSR, and performant UIs.</p>
+      </div>
+      <div class="skill-card">
+        <h3>UI/UX Engineering</h3>
+        <p>From design tokens to accessible, responsive layouts.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Node.js / Python</h3>
+        <p>Full-stack integration, REST APIs, and data flow.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Tailwind + CSS Art</h3>
+        <p>Pixel-perfect styling, animations, and design systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>✨ Selected projects</h2>
+    <div class="project-card">
+      <h3>Nebula Finance Dashboard</h3>
+      <p>Interactive analytics platform with real-time data visualization. Built with D3.js and React, deployed on Vercel. Reduced load time by 40%.</p>
+      <div class="tech-used">Tech: React, D3, Firebase, Tailwind</div>
+    </div>
+    <div class="project-card">
+      <h3>Heritage AI — Art Recognizer</h3>
+      <p>Machine learning model that identifies traditional art motifs and generates contextual info. Featured in design week 2024.</p>
+      <div class="tech-used">Tech: Python, TensorFlow, Flask, OpenCV</div>
+    </div>
+    <div class="project-card">
+      <h3>Monochrome Design System</h3>
+      <p>A fully accessible component library with dark-first approach, used by 10+ internal products. Supports WCAG AAA contrast.</p>
+      <div class="tech-used">Tech: Storybook, CSS-in-JS, Figma API</div>
+    </div>
+  </section>
+
+  <!-- Difference Section (What makes me different) -->
+  <section class="section">
+    <h2>⎯ The difference ⎯</h2>
+    <div class="difference-box">
+      <p>I don't just write code — I shape digital narratives. My approach merges technical depth with visual clarity. On a pure black canvas, every element matters. I bring that philosophy into every project: minimal noise, maximum impact, and inclusive design for real humans.</p>
+      <p style="margin-top: 20px;">⚡ Zero split background. Pure focus. Your vision, elevated.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>📬 Reach out</h2>
+    <ul class="contact-list">
+      <li>📧 <a href="mailto:hello@maya.design">hello@maya.design</a></li>
+      <li>🔗 <a href="#">linkedin.com/in/maya-k</a></li>
+      <li>🐙 <a href="#">github.com/mayacreates</a></li>
+      <li>🌐 <a href="#">portfolio midnight edition</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Maya Krishnamoorthy — Black canvas, white light. No split backgrounds, pure minimalism.</p>
+    <p style="margin-top: 8px; font-size: 12px;">✦ Background: #000000 | Text: #ffffff | Full contrast ✦</p>
+  </footer>
+
+  <script>
+    // simple interaction to show alert on button click (connects with contact)
+    const btn = document.getElementById('contactBtn');
+    if(btn) {
+      btn.addEventListener('click', () => {
+        const contactSection = document.getElementById('contact');
+        if(contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          alert('Let’s create something bold together — hello@maya.design');
+        }
+      });
+    }
+    
+    // optional: smooth scroll for navbar links
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href');
+        if(hash === '#') return;
+        if(hash === '#skills' || hash === '#projects' || hash === '#contact') {
+          e.preventDefault();
+          const target = document.querySelector(hash);
+          if(target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+```
