@@ -1,9 +1,8 @@
-// Welcome message
+
 window.addEventListener("load", () => {
     console.log("Philadelphia Chikalimba Portfolio Loaded Successfully");
 });
 
-// Smooth hover effect for project cards
 const projectCards = document.querySelectorAll(".project-card");
 
 projectCards.forEach(card => {
@@ -16,7 +15,6 @@ projectCards.forEach(card => {
     });
 });
 
-// Dynamic footer year
 const footer = document.querySelector("footer p");
 const currentYear = new Date().getFullYear();
 
