@@ -1,218 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Personal Portfolio</title>
-  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
-  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap)" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philadelphia Chikalimba</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#" class="logo">PhiladelphiaChikalimba<span>.</span></a>
-      <nav class="site-nav" id="siteNav">
-        <ul>
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+
+  <header>
+    <img src="photo.jpg" alt="Philadelphia Chikalimba">
+    <h1>Philadelphia Chikalimba</h1>
+    <p class="title">Commerce and Tech Student</p>
+
+    <div class="intro">
+      <h2>Home</h2>
+
+      <p>
+        I am a commerce student building a brand that bridges business and technology.
+        I combine business knowledge with technical skills to create practical digital
+        solutions that solve real-world problems for businesses and individuals.
+      </p>
+
+      <p>
+        What makes me different from other commerce and tech students is my willingness
+        to step outside my comfort zone, learn quickly, and continuously improve myself.
+        I pay close attention to detail, communicate effectively, and focus on producing
+        high-quality work in everything I do.
+      </p>
+
+      <p>
+        My goal is to grow into a professional who understands both business operations
+        and technology development, allowing me to create smart systems that improve
+        efficiency and decision-making.
+      </p>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="home" class="section hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow">Hello, I’m</p>
-          <h1>Philadelphia Chikalimba</h1>
-          <p class="subtitle">Developer • UI Enthusiast • Problem Solver</p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn primary">View Projects</a>
-            <a href="#contact" class="btn ghost">Contact Me</a>
-          </div>
-          <div class="socials">
-            <a href="#" aria-label="GitHub" class="social-link">GitHub</a>
-            <a href="#" aria-label="LinkedIn" class="social-link">LinkedIn</a>
-            <a href="#" aria-label="Twitter" class="social-link">Twitter</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="avatar">
-            <!-- Replace with your photo -->
-            <img src="[via.placeholder.com](https://via.placeholder.com/420x420.png?text=Your+Photo)" alt="Portrait of Your Name" />
-          </div>
-        </div>
-      </div>
-      <a href="#about" class="scroll-indicator" aria-label="Scroll to About">Scroll</a>
-    </section>
+  <section id="about">
+    <h2>Biodata</h2>
 
-    <!-- About -->
-    <section id="about" class="section about">
-      <div class="container grid-2">
-        <div>
-          <h2>About Me</h2>
-          <p>
-            I’m a developer focused on building accessible, performant web experiences.
-            I love turning ideas into products with clean UI and maintainable code.
-          </p>
-          <p>
-            Outside of work, you’ll find me exploring design systems, contributing to open-source,
-            and learning new tools that improve the developer experience.
-          </p>
-          <a href="resume.pdf" class="btn" download>Download Resume</a>
-        </div>
-        <div class="about-cards">
-          <div class="about-card">
-            <h3>Experience</h3>
-            <p>2+ years building responsive web apps and component libraries.</p>
-          </div>
-          <div class="about-card">
-            <h3>Focus</h3>
-            <p>Frontend engineering, accessibility, and micro-interactions.</p>
-          </div>
-          <div class="about-card">
-            <h3>Stack</h3>
-            <p>HTML, CSS, JavaScript, React, Node, Git.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <p>
+      I am a commerce and tech student passionate about innovation, business growth,
+      and software development. I enjoy learning new technologies and using them
+      together with commerce knowledge to solve business challenges.
+    </p>
+  </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul class="skill-list">
-          <li class="skill">
-            <span>HTML5</span>
-            <div class="bar" data-level="95"><span></span></div>
-          </li>
-          <li class="skill">
-            <span>CSS3</span>
-            <div class="bar" data-level="90"><span></span></div>
-          </li>
-          <li class="skill">
-            <span>JavaScript</span>
-            <div class="bar" data-level="85"><span></span></div>
-          </li>
-          <li class="skill">
-            <span>React</span>
-            <div class="bar" data-level="80"><span></span></div>
-          </li>
-          <li class="skill">
-            <span>Node.js</span>
-            <div class="bar" data-level="70"><span></span></div>
-          </li>
-        </ul>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
 
-    <!-- Projects -->
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="cards">
-          <article class="card">
-            <img src="[via.placeholder.com](https://via.placeholder.com/800x520.png?text=Project+One)" alt="Screenshot of Project One" />
-            <div class="card-body">
-              <h3>Project One</h3>
-              <p>A responsive web app with a custom component library and dark mode.</p>
-              <div class="tags">
-                <span>React</span><span>TypeScript</span><span>Tailwind</span>
-              </div>
-              <div class="actions">
-                <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
-                <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-          </article>
+    <ul>
+      <li>Paying attention to details</li>
+      <li>Great communication skills</li>
+      <li>Excellent public speaker</li>
+      <li>Understanding of accounting standards</li>
+      <li>Basic coding</li>
+      <li>Database creation and management</li>
+      <li>Problem solving</li>
+      <li>Team collaboration</li>
+    </ul>
+  </section>
 
-          <article class="card">
-            <img src="[via.placeholder.com](https://via.placeholder.com/800x520.png?text=Project+Two)" alt="Screenshot of Project Two" />
-            <div class="card-body">
-              <h3>Project Two</h3>
-              <p>API-powered dashboard with charts, filters, and export features.</p>
-              <div class="tags">
-                <span>Vite</span><span>Vanilla JS</span><span>Chart.js</span>
-              </div>
-              <div class="actions">
-                <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
-                <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-          </article>
+  <section id="projects">
+    <h2>Projects</h2>
 
-          <article class="card">
-            <img src="[via.placeholder.com](https://via.placeholder.com/800x520.png?text=Project+Three)" alt="Screenshot of Project Three" />
-            <div class="card-body">
-              <h3>Project Three</h3>
-              <p>Landing page optimized for performance and accessibility.</p>
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>Aria</span>
-              </div>
-              <div class="actions">
-                <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
-                <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <div class="project-card">
+      <h3>Realtime Inventory and Sales Tracker</h3>
 
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-      <div class="container grid-2">
-        <div>
-          <h2>Contact</h2>
-          <p>Want to collaborate or have a project in mind? Let’s talk.</p>
-          <ul class="contact-list">
-            <li><strong>Email:</strong> you@example.com</li>
-            <li><strong>Location:</strong> Your City, Country</li>
-            <li><strong>Open to:</strong> Full-time, Freelance</li>
-          </ul>
-        </div>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required placeholder="Your name" />
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com" />
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Say hello..."></textarea>
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <button type="submit" class="btn primary">Send Message</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
+      <p>
+        This web app uses HTML, CSS, and JavaScript to display a product catalog
+        and sales dashboard, while a Python backend processes inventory updates.
+        The system provides live revenue trends, low-stock alerts, and restock
+        recommendations to help small business owners make better decisions.
+      </p>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
-      <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+      <p class="tags">
+        Skills used: HTML, CSS, JavaScript, Python
+      </p>
     </div>
+
+    <div class="project-card">
+      <h3>Business Database System</h3>
+
+      <p>
+        Designed and created a database system for storing customer records,
+        sales information, and inventory data. The project improved data
+        organization, quick retrieval of information, and business reporting.
+      </p>
+
+      <p class="tags">
+        Skills used: SQL, Database Design, Problem Solving
+      </p>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p>Feel free to reach out.</p>
+
+    <ul class="contact-list">
+      <li>
+        <a href="mailto:phil.chikalimba@gmail.com">
+          phil.chikalimba@gmail.com
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.instagram.com/philadelphiachikalimba?igsh=0Ghucnkxb2ZpOHd5"
+           target="_blank"
+           rel="noopener noreferrer">
+          Instagram
+        </a>
+      </li>
+
+      <li>
+        <a href="https://github.com/philly619"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Portfolio created by Philadelphia Chikalimba © 2026</p>
   </footer>
 
   <script src="script.js"></script>
+
 </body>
-                </html>
-                
+</html>
