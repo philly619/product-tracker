@@ -1,21 +1,22 @@
-// ── TABLE SEARCH FILTER ──
-function filterTable(query) {
-  const q = query.toLowerCase();
-  const rows = document.querySelectorAll('#customer-table tbody tr');
-  rows.forEach(row => {
-    const text = row.textContent.toLowerCase();
-    row.style.display = text.includes(q) ? '' : 'none';
-  });
-}
+// Welcome Button Interaction
 
-// ── SCROLL-TRIGGERED ROW ANIMATIONS ──
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      e.target.style.animation = `fadeUp 0.5s ${i * 0.04}s ease both`;
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1 });
+const welcomeBtn = document.getElementById("welcomeBtn");
 
-document.querySelectorAll('tbody tr').forEach(row => observer.observe(row));
+welcomeBtn.addEventListener("click", () => {
+  alert(
+    "Welcome to Philadelphia Chikalimba's Portfolio!\n\n" +
+    "Explore my skills, projects, and journey in commerce and technology."
+  );
+});
+
+// Smooth Scroll Effect for Navigation Links
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
