@@ -811,7 +811,7 @@ ul { list-style: none; }
 .ach-badge-text p {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: var(--black);
+  color: var(--cream);
   line-height: 1.65;
 }
 
