@@ -490,7 +490,7 @@ ul { list-style: none; }
 .skill-card p {
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--text-light);
+  color: var(--black);
   line-height: 1.7;
 }
 
@@ -573,7 +573,7 @@ ul { list-style: none; }
 .project-body p {
   font-family: var(--font-body);
   font-size: 1.05rem;
-  color: var(--text-mid);
+  color: var(--black);
   line-height: 1.85;
   margin-bottom: 1.2rem;
   max-width: 680px;
@@ -741,7 +741,7 @@ ul { list-style: none; }
 .timeline-content p {
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--cream-off);
+  color: var(--black);
   line-height: 1.75;
 }
 
@@ -810,7 +810,7 @@ ul { list-style: none; }
 .ach-badge-text p {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: var(--khaki-light);
+  color: var(--black);
   line-height: 1.65;
 }
 
